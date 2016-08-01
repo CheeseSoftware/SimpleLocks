@@ -1,0 +1,9 @@
+name: SimpleLocks
+main: com.github.cheesesoftware.simplelocks.SimpleLocks
+version: 1.0
+author: gustav9797
+commands:
+    simplelocks:
+        description: A command for administrating SimpleLocks.
+        aliases: [sl, slocks]
+        permission: simplelocks.admin

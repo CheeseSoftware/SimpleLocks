@@ -1,0 +1,44 @@
+# Default SimpleLocks config file
+
+# DB type sqlite/mysql
+dbtype: mysql
+
+# Only used if mysql
+host: localhost
+database: minecraft
+port: 3306
+username: root
+password: '1234'
+
+# Highest key generated, used to keep keys unique
+highestkeyid: 0
+
+# Allow locked blocks to be blown up or zombie break wooden doors or wooden blocks burn etc.
+allownaturedestruction: false
+
+# You can use the %b-placeholder in the messages It will be replaced with the name of the block interacted with.
+messages:
+    lockexists: "This %b already has a lock."
+    lockplaced: "You have placed a lock on this %b."
+    blocklocked: "This %b is now locked."
+    blockunlocked: "This %b is now unlocked."
+    keynomatch: "Your key doesn't match the lock."
+    blockislocked: "This %b is locked."
+    adminopen: "You can access this locked %b as you're lock admin."
+    
+# Define what blocks should be lockable.
+lockableblocks:
+    - CHEST
+    - IRON_DOOR_BLOCK
+    - WOODEN_DOOR
+    - DISPENSER
+    - ANVIL
+    - FURNACE
+    - JUKEBOX
+    - BEACON
+    - HOPPER
+    - DROPPER
+    - IRON_TRAPDOOR
+    - TRAP_DOOR
+    - TRAPPED_CHEST
+    - FENCE_GATE
