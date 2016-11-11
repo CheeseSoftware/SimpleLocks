@@ -78,8 +78,7 @@ public class SQLiteConnection implements IConnection {
                 UUID owner = UUID.fromString(result.getString("owneruuid"));
                 boolean locked = result.getBoolean("locked");
 
-                LockedBlock lockedBlock = new LockedBlock(location, keyId, owner);
-                lockedBlock.setLocked(locked);
+                LockedBlock lockedBlock = new LockedBlock(location, keyId, owner, locked);
                 lockedBlocks.add(lockedBlock);
             }
         } catch (SQLException ex) {
@@ -96,7 +95,7 @@ public class SQLiteConnection implements IConnection {
             public void run() {
                 PreparedStatement s;
                 try {
-                    //s = getConnection().prepareStatement("INSERT INTO lockedblocks SET `x`=?, `y`=?, `z`=?, `world`=?, `keyid`=?, `owneruuid`=?, `locked`=?");
+                    // s = getConnection().prepareStatement("INSERT INTO lockedblocks SET `x`=?, `y`=?, `z`=?, `world`=?, `keyid`=?, `owneruuid`=?, `locked`=?");
                     s = getConnection().prepareStatement("INSERT INTO lockedblocks VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
                     s.setInt(1, lockedBlock.getLocation().getBlockX());
                     s.setInt(2, lockedBlock.getLocation().getBlockY());

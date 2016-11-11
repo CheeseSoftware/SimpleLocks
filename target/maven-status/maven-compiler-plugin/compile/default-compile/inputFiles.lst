@@ -1,9 +1,9 @@
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\LockedBlock.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\LockManager.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\IConnection.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\SQLiteConnection.java
 C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\SimpleLocks.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\commands\CommandSimpleLocks.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\CraftingManager.java
-C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\MySQLConnection.java
 C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\listeners\CraftingListener.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\commands\CommandSimpleLocks.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\IConnection.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\MySQLConnection.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\CraftingManager.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\LockManager.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\LockedBlock.java
+C:\Users\Gustav\Documents\GitHub\SimpleLocks\src\main\java\com\github\cheesesoftware\simplelocks\connection\SQLiteConnection.java

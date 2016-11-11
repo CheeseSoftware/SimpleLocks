@@ -28,7 +28,7 @@ public class LockManager {
     }
 
     public LockedBlock createLockedBlock(Block block, Player owner, int keyId) {
-        LockedBlock lockedBlock = new LockedBlock(block.getLocation(), keyId, owner.getUniqueId());
+        LockedBlock lockedBlock = new LockedBlock(block.getLocation(), keyId, owner.getUniqueId(), true);
         lockedBlocks.put(lockedBlock.getLocation(), lockedBlock);
 
         plugin.getConnection().createLockedBlock(lockedBlock);

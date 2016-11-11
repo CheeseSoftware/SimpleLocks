@@ -51,8 +51,6 @@ public class SimpleLocks extends JavaPlugin implements Listener {
                     getConfig().getString("password"));
         else
             connection = new SQLiteConnection(this);
-        // else
-        // flatfile
 
         craftingManager = new CraftingManager(this);
         craftingListener = new CraftingListener(craftingManager);
@@ -83,11 +81,14 @@ public class SimpleLocks extends JavaPlugin implements Listener {
     @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerInteractEvent(PlayerInteractEvent e) {
         Player player = e.getPlayer();
-        if (e.getAction() == Action.RIGHT_CLICK_BLOCK && lockableBlocks.contains(e.getClickedBlock().getType())) {
+        Bukkit.getServer().broadcastMessage("type: \"" + e.getClickedBlock().getType() + "\"1");
+        if (e.getClickedBlock() != null && e.getClickedBlock().getType() != null && e.getAction() == Action.RIGHT_CLICK_BLOCK && lockableBlocks.contains(e.getClickedBlock().getType())) {
             ItemStack item = e.getItem();
+            Bukkit.getServer().broadcastMessage("type: \"" + e.getClickedBlock().getType() + "\"2");
             if ((player.hasPermission("simplelocks.player.createlock.*") || player.hasPermission("simplelocks.player.createlock." + e.getClickedBlock().getType().toString())) && player.isSneaking()
                     && item != null && item.getType() == Material.STONE_BUTTON && item.getItemMeta() != null && item.getItemMeta().getDisplayName().equals("Lock")) {
                 e.setCancelled(true);
+                Bukkit.getServer().broadcastMessage("item type: \"" + item.getType() + "\"3");
                 // Get lock ID
                 ItemMeta meta = item.getItemMeta();
                 List<String> lore = meta.getLore();

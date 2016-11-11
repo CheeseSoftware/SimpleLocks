@@ -42,20 +42,8 @@ public class CraftingListener implements Listener {
             int slot = e.getRawSlot();
             Player player = (Player) e.getWhoClicked();
 
-            /*
-             * Bukkit.broadcastMessage("Slot " + slot);
-             * 
-             * Bukkit.broadcastMessage("Holding item " + (e.getWhoClicked().getItemOnCursor() == null ? "NULL" : e.getWhoClicked().getItemOnCursor().getType()));
-             * Bukkit.broadcastMessage("Current item " + (e.getCurrentItem() == null ? "NULL" : e.getCurrentItem().getType())); Bukkit.broadcastMessage("Item in slot " + (anvilInv.getItem(slot) ==
-             * null ? "NULL" : anvilInv.getItem(slot))); Bukkit.broadcastMessage("Action " + e.getAction());
-             */
-
             if (player.hasPermission("simplelocks.player.craft.key") && slot == 2 && anvilInv.getItem(2) != null && anvilInv.getItem(2).getType() == Material.TRIPWIRE_HOOK
-                    && anvilInv.getItem(2).getItemMeta() != null && (anvilInv.getItem(2).getItemMeta().getDisplayName().equals("Key")/*
-                                                                                                                                      * ||
-                                                                                                                                      * anvilInv.getItem(slot).getItemMeta().getDisplayName().equals("Lock"
-                                                                                                                                      * )
-                                                                                                                                      */) && anvilInv.getItem(0) != null
+                    && anvilInv.getItem(2).getItemMeta() != null && (anvilInv.getItem(2).getItemMeta().getDisplayName().equals("Key")) && anvilInv.getItem(0) != null
                     && anvilInv.getItem(0).getType() == Material.TRIPWIRE_HOOK && anvilInv.getItem(0).getItemMeta() != null
                     && anvilInv.getItem(0).getItemMeta().getDisplayName().equals("Incomplete Key") && (anvilInv.getItem(1) == null || anvilInv.getItem(1).getType() == Material.AIR)
                     && (e.getWhoClicked().getItemOnCursor() == null || e.getWhoClicked().getItemOnCursor().getType() == Material.AIR)) {
@@ -72,13 +60,8 @@ public class CraftingListener implements Listener {
                 }
 
                 anvilInv.setItem(2, new ItemStack(Material.AIR, 0));
-                // checkAnvilInventory(anvilInv, player, 0);
             } else if (player.hasPermission("simplelocks.player.craft.copykey") && slot == 2 && anvilInv.getItem(2) != null && anvilInv.getItem(2).getType() == Material.TRIPWIRE_HOOK
-                    && anvilInv.getItem(2).getItemMeta() != null && (anvilInv.getItem(2).getItemMeta().getDisplayName().equals("Key")/*
-                                                                                                                                      * ||
-                                                                                                                                      * anvilInv.getItem(slot).getItemMeta().getDisplayName().equals("Lock"
-                                                                                                                                      * )
-                                                                                                                                      */) && anvilInv.getItem(0) != null
+                    && anvilInv.getItem(2).getItemMeta() != null && (anvilInv.getItem(2).getItemMeta().getDisplayName().equals("Key")) && anvilInv.getItem(0) != null
                     && anvilInv.getItem(0).getType() == Material.TRIPWIRE_HOOK && anvilInv.getItem(0).getItemMeta() != null && anvilInv.getItem(0).getItemMeta().getDisplayName().equals("Key")
                     && anvilInv.getItem(1) != null && anvilInv.getItem(1).getType() == Material.TRIPWIRE_HOOK && anvilInv.getItem(1).getItemMeta() != null
                     && anvilInv.getItem(1).getItemMeta().getDisplayName().equals("Incomplete Key")) {
@@ -91,7 +74,6 @@ public class CraftingListener implements Listener {
                     e.getWhoClicked().setItemOnCursor(cursor);
                 } else {
                     // Player has item in hand, abort!
-                    // checkAnvilInventory(anvilInv, player, 0);
                     return;
                 }
 
@@ -104,8 +86,6 @@ public class CraftingListener implements Listener {
                 }
 
                 anvilInv.setItem(2, new ItemStack(Material.AIR, 0));
-                // checkAnvilInventory(anvilInv, player, 0);
-                // player.updateInventory();
             } else if (player.hasPermission("simplelocks.player.craft.lock") && slot == 2 && anvilInv.getItem(2) != null && anvilInv.getItem(2).getType() == Material.STONE_BUTTON
                     && anvilInv.getItem(2).getItemMeta() != null && (anvilInv.getItem(2).getItemMeta().getDisplayName().equals("Lock")) && anvilInv.getItem(0) != null
                     && anvilInv.getItem(0).getType() == Material.TRIPWIRE_HOOK && anvilInv.getItem(0).getItemMeta() != null && anvilInv.getItem(0).getItemMeta().getDisplayName().equals("Key")
@@ -120,7 +100,6 @@ public class CraftingListener implements Listener {
                     e.getWhoClicked().setItemOnCursor(cursor);
                 } else {
                     // Player has item in hand, abort!
-                    // checkAnvilInventory(anvilInv, player, 0);
                     return;
                 }
 
@@ -133,8 +112,6 @@ public class CraftingListener implements Listener {
                 }
 
                 anvilInv.setItem(2, new ItemStack(Material.AIR, 0));
-                // checkAnvilInventory(anvilInv, player, 0);
-                // player.updateInventory();
             }
             craftingManager.checkAnvilInventory(anvilInv, player, 2);
         }

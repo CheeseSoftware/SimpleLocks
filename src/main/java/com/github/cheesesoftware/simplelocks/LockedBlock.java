@@ -9,12 +9,13 @@ public class LockedBlock {
     private Location location;
     private int keyId;
     private UUID owner;
-    private boolean locked = false;
+    private boolean locked;
     
-    public LockedBlock(Location location, int keyId, UUID owner) {
+    public LockedBlock(Location location, int keyId, UUID owner, boolean locked) {
         this.location = location;
         this.keyId = keyId;
         this.owner = owner;
+        this.locked = locked;
     }
     
     public int getKeyId() {

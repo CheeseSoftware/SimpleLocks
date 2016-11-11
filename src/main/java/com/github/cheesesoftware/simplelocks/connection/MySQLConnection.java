@@ -89,8 +89,7 @@ public class MySQLConnection implements IConnection {
                 UUID owner = UUID.fromString(result.getString("owneruuid"));
                 boolean locked = result.getBoolean("locked");
 
-                LockedBlock lockedBlock = new LockedBlock(location, keyId, owner);
-                lockedBlock.setLocked(locked);
+                LockedBlock lockedBlock = new LockedBlock(location, keyId, owner, locked);
                 lockedBlocks.add(lockedBlock);
             }
         } catch (SQLException ex) {
